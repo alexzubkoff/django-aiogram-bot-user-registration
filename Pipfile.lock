@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "63c95ec6bed92a45982b4491e4f8bcfc6c95c8a9603f8013468f674c741769e6"
+            "sha256": "a22acf3e7cd9f78a393ab4fe5bcd7a2a68bd9f2e014c9dbd3b723e24e18f4539"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -31,6 +31,14 @@
             ],
             "index": "pypi",
             "version": "==4.1.4"
+        },
+        "django-taggit": {
+            "hashes": [
+                "sha256:543218ac346fbe02a65733e0341c91b57a3e0f7a41568966b26f1cea9edc4805",
+                "sha256:c8f2e4eae387939089b3d75d1d8649e008880970c068ce9d0e82f87fd5e29508"
+            ],
+            "index": "pypi",
+            "version": "==3.1.0"
         },
         "psycopg2-binary": {
             "hashes": [
@@ -116,14 +124,6 @@
             ],
             "markers": "python_version >= '3.5'",
             "version": "==0.4.3"
-        },
-        "tzdata": {
-            "hashes": [
-                "sha256:2b88858b0e3120792a3c0635c23daf36a7d7eeeca657c323da299d2094402a0d",
-                "sha256:fe5f866eddd8b96e9fcba978f8e503c909b19ea7efda11e52e39494bad3a7bfa"
-            ],
-            "markers": "sys_platform == 'win32'",
-            "version": "==2022.7"
         }
     },
     "develop": {}
