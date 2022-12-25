@@ -14,8 +14,8 @@ class PublishedManager(models.Manager):
 
 
 class Post(models.Model):
-    objects = models.Manager()  # The default manager.
-    published = PublishedManager()  # Our custom manager.
+    objects = models.Manager()
+    published = PublishedManager()
     STATUS_CHOICES = (
          ('draft', 'Draft'),
          ('published', 'Published'),

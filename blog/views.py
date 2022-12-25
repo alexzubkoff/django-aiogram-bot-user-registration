@@ -33,14 +33,10 @@ def post_detail(
     comments = post.comments.filter(active=True)
     new_comment = None
     if request.method == 'POST':
-        # A comment was posted
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
-            # Create Comment object but don't save to database yet
             new_comment = comment_form.save(commit=False)
-            # Assign the current post to the comment
             new_comment.post = post
-            # Save the comment to the database
             new_comment.save()
     else:
         comment_form = CommentForm()
@@ -58,14 +54,11 @@ def post_detail(
 
 
 def post_share(request, post_id):
-    # Retrieve post by id
     post = get_object_or_404(Post, id=post_id, status='published')
     sent = False
     if request.method == 'POST':
-        # Form was submitted
         form = EmailPostForm(request.POST)
         if form.is_valid():
-            # Form fields passed validation
             cd = form.cleaned_data
             post_url = request.build_absolute_uri(
                 post.get_absolute_url()
