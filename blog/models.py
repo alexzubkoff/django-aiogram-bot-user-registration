@@ -39,6 +39,9 @@ class Post(models.Model):
         choices=STATUS_CHOICES,
         default='draft'
     )
+    users_like = models.ManyToManyField(settings.AUTH_USER_MODEL,
+                                        related_name='posts_liked',
+                                        blank=True)
 
     class Meta:
         ordering = ('-publish',)
