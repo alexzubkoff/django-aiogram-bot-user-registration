@@ -26,8 +26,12 @@ build the image.
 
 ```sh
 docker-compose up -d --build 
+docker-compose exec web python manage.py migrate  
 ```
-
+When create your superuser:
+```sh
+docker-compose exec web python manage.py createsuperuser 
+```
 Verify the deployment by navigating to your server address in
 your preferred browser.
 
